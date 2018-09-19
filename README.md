@@ -48,17 +48,106 @@ To **declare a function**:
 
 _Example of a function declaration_
 
-int subtract_two_numbers(int x, int y) {
- if (x > y)
- {
-  return x-y;
- }
- else 
- {
- return y-x;
- }
+    int subtract_two_numbers(int x, int y) {
+        if (x > y)
+         {return x-y;}
+         else {return y-x;}
+     }
  
  Variables can also be initialized with the output of functions as well. 
  
  int subtracted = subtract_two_numbers(13, 10);
+
+#### Structure Declarations
+
+Structures are used to define new types that are not explicitly defined in the standard C language. Structures are seveal core variables mentioned in the above table together to define a new type.
+
+To represent, complex data types that have multiple properties structs (structures) are used.
+
+For example to create the properties of a Downage in football we can define the following:
+
+    typedef struct {
+        int down;
+        int distance;
+    } down-and-distance
+    
+The type defined above is no different then the built-in types. To access individual fields, use a dot (.) followed by the name of the field
+
+    /*Define a third down and 15 yards*/
+    downage d;
+    d.down=3;
+    d.distance=15;
+    
+#### Pointers
+
+A pointer is the same as a normal type that has an asterisk suffixed to the name. 
+
+To declare a pointer to an int i.e. int*.
+
+Pointers are used in C for strings or list mostly.
+
+They point to the memory of the address of the variable and access the original variablewhere if not using a pointer there may erros since you are dealing with a copy of the variable. 
+
+#### Strings
+
+In C, strings are represented by char*. Inside, strings are stored as a list of characters in C, where the final character is the _null terminator_. 
+
+#### Conditionals
+
+Conditional statements only perform code after the statement if the statement's conditioned are satisfied.
+
+Examples of conditionals:
+   * if, else
+   * && (and)
+   * || (or)
+   
+#### Loops
+
+Loops allow code to be repeated until some condition is met causing the loop to be exited.
+
+*While Loop*
+
+Repeatedly executes a block of code until some condition becomes false.
+
+    int i =5;
+    while (i > 0) {
+    puts("Loop Iteration");
+    i = i - 1;
+    }
+    
+ *For Loop*
+ 
+ Requires three expression seperated by semicolons (;):
+ 
+ * The initalizer, performed before the loop starts initializes the variable
+ * The condition, checked during every iteration of the loop to check the condition being met or not.
+ * THe counter, performed at the end of each loop can implement or decrement variable intialized in loop
+ 
+ #### Bonus Marks
+ 
+ * What build in types are there other than the ones listed?
+ 
+   * Long Double, an even more precise float
+   * Long Long, very large int
+   * Ints can also be unsigned or signed, signed integers can be + or -, unsigned are all +
+
+* What other conditional operators are there other than the &gt; and &lt; ?
+   * == (equal), != (not equal), && (and), || (or), >= (gt or equal to), <= (lt or equal to).
+
+* What other mathematical operats are there other than add or subtact?
+   * Multiplication (*)
+   * Division (/)
+   * Modulo (%)
+   
+* THe += operator will increment whatever variable it operates on by whatever value is pecified. 
+
+* The do loop works by doing what is specified until a condition is met than exiting and following the programs pattersns
+
+* The switch statement is used when a case of options are identified as an outcome and the programmer wants to  create a cswitch value for each case it will execute the code that is identified at the switch statement.
+
+* Break allows for the program to exit out of a function call and return to main.
+
+* Continue allows the program to follow the path it was following after the code has run.
+
+* typedef tells the compiler that a new type is being created for a struct. The type def lets the compiler know what th allows for a type to be defined by setting the variables that define the complex type inside.
 
