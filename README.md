@@ -141,9 +141,9 @@ Repeatedly executes a block of code until some condition becomes false.
    
 * THe += operator will increment whatever variable it operates on by whatever value is pecified. 
 
-* The do loop works by doing what is specified until a condition is met than exiting and following the programs pattersns
+* The do loop works by doing what is specified until a condition is met than exits. A do loop differs than a while loop because a do loop will execute an initial iteration first before checking the condition whereas a while loop will not execute until the condition is satisfied.
 
-* The switch statement is used when a case of options are identified as an outcome and the programmer wants to  create a cswitch value for each case it will execute the code that is identified at the switch statement.
+* The switch statement allows for the program to follow different cases on a path defined by the code executed when the case is met within the switchs statement.
 
 * Break allows for the program to exit out of a function call and return to main.
 
