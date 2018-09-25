@@ -113,7 +113,7 @@ Symbol | Rule
 "ab"   | The string ab is required
 'a'    | The character a is required
 'a' 'b'| First 'a' is required then 'b' is required
-'a' "|" 'b' | Either 'a' or 'b' is required
+'a' ( or symbol from C) 'b' | Either 'a' or 'b' is required
 'a'*   | Zero or more 'a' required.
 'a'+   | One or more 'a' required.
 <abba>  | The rule abba is required.
