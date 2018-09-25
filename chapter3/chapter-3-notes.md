@@ -3,12 +3,11 @@
 ## Chapter 3
 
 #### Programs
-* A program of C consist only of function definitions and structure definitions.
-    * A C source file will contain functions and types. These functions can call other functions 
-    or themselves.
-    * Functions can call external libraries using "include" files and this external function calling allows for complexity in C.
-    * A C program will always start with the execution of the **main** function. i.e. 
-    int main(void).
+* A program written in C consists only of function definitions and structure definitions.
+    * A C source file will contain functions and types. 
+    * Functions are able to call other functions or can potentially call itself "recursion".
+    * Functions can call external libraries using "include" files. This adds complexity to C.
+    * A C program will always start with the execution of the **main** function written as > int main(void).
     
     
 #### Variables
