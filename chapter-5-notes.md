@@ -117,3 +117,66 @@ Symbol | Rule
 'a'*   | Zero or more 'a' required.
 'a'+   | One or more 'a' required.
 <abba>  | The rule abba is required.
+    
+## Bonus Marks
+
+1. Write some more examples of strings the Doge langaugage contains.
+    * Such language wow lisp many building, many language such lisp wow C
+    
+2. Why are there back slashes \ in front of the quote marks " in the grammar?
+    * It is the escape quote character notification to let the compiler know that the character should be a " and not to interfere with     the string quote for the grammar definitions.
+    
+3. Why are there back slashes \ at the end of the line in the grammar?
+    * This back slash has same function as mentioned in question 2 but this provides the closing quote for the identified grammar rule      with the string definitions.
+    
+4. Describe textually a grammar for decimal numbers such as 0.01 or 52.221?
+
+       mpc_parser_t* Hundreds = mpc_new("hundreds");
+       mpc_parser_t* Tens = mpc_new("tens");
+       mpc_parser_t* Ones = mpc_new("ones");
+       mpc_parser_t* DecimalPoint = mpc_new("decimalPoint");
+       mpc_parser_t* Tenths = mpc_new("tenths");
+       mpc_parser_t* Hundredths= mpc_new("hundredths");
+       mpc_parser_t* Thousandths = mpc_new("thousandths");
+   
+       mpca_lang(MPCA_LANG_DEFAULT,
+        "                                           \
+        hundreds : \"1\" | \"2\" | \"3\" | \"4\" | \"5\" \
+                   | \"6\" | \"7\" | \"8\" | \"9\" | \"10\"; \ 
+        tens : \"1\" | \"2\" | \"3\" | \"4\" | \"5\" \
+                   | \"6\" | \"7\" | \"8\" | \"9\" | \"10\" ; \
+        ones : \"1\" | \"2\" | \"3\" | \"4\" | \"5\" \
+                   | \"6\" | \"7\" | \"8\" | \"9\" | \"10\" ; \
+        decimalPoint : \".\" ;
+        tenths : \"1\" | \"2\" | \"3\" | \"4\" | \"5\" \
+                   | \"6\" | \"7\" | \"8\" | \"9\" | \"10\" ; \
+        hundredths : \"1\" | \"2\" | \"3\" | \"4\" | \"5\" \
+                   | \"6\" | \"7\" | \"8\" | \"9\" | \"10\" ; \
+        thousandths : \"1\" | \"2\" | \"3\" | \"4\" | \"5\"  \
+                   | \"6\" | \"7\" | \"8\" | \"9\" | \"10\" ; \
+        ",
+        Hundreds, Tens, Ones, DecimalPoint, Tenths, Hundredths, Thousandths);
+        
+        /*Parsing...*/
+        
+        mpc_cleanup(7, Hundreds, Tens, Ones, DecimalPoint, Tenths, Hundredths, Thousandths);
+        
+5. Describe textually a grammar for web URLs such as http://www.buildyourownlisp.com
+
+    Textually - > http://www. + domainName + domainExtension (ie .com, .org, .edu, .net...)
+    
+       <http extension> <domainName> <domainExtension>
+
+6. Describe textually a grammar for simple English sentences such as **the cat sat on the mat**.
+
+    Textually - > Article (the | a) + noun + verb + adverb + article+ noun
+         <Article> <noun> <verb> <adverb> <article> <noun>
+    
+7. Describe more fomally the above grammars. Use |, /* or any symbols as needed. 
+    Completed Above.
+
+8. If you are familiar with JSON, textually describe a grammar for it.
+    I am not familiar with JSON but am going to give it a shot.
+    
+    <attributeName> : <attributeValue>
+    
