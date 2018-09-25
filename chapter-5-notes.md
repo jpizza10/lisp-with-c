@@ -177,6 +177,6 @@ Symbol | Rule
 
 8. If you are familiar with JSON, textually describe a grammar for it.
     I am not familiar with JSON but am going to give it a shot.
-    
+  
     <attributeName> : <attributeValue>
     
