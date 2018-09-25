@@ -7,7 +7,7 @@
     * A C source file will contain functions and types. 
     * Functions are able to call other functions or can potentially call itself "recursion".
     * Functions can call external libraries using "include" files. This adds complexity to C.
-    * A C program will always start with the execution of the **main** function written as > int main(void).
+    * A C program will always start with the execution of the **main** function written as `int main(void)`
     
     
 #### Variables
