@@ -66,3 +66,9 @@ In the mpc parser combinator library, the regular expressions are placed in betw
 i.e. /-?\[\0-9\]\+/
 
 #### Installing mpc
+
+* Create a regular expression that is valid for `pit` , `pot` , `respite` , but ***not*** `spit`, `peat`, or `part`.
+    * In the valid terms, the `p` is one character away from the `t`. One vowel exists between the `p` and the `t`. 
+    The `p` can be prefixed by characters as long as it is more than one.
+    
+    /.+?p+\[aeiou\]t+/
