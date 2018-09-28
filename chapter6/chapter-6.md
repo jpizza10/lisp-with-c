@@ -65,10 +65,14 @@ In the mpc parser combinator library, the regular expressions are placed in betw
 
 i.e. /-?\[\0-9\]\+/
 
-#### Installing mpc
+#### Bonus Marks
 
-* Create a regular expression that is valid for `pit` , `pot` , `respite` , but ***not*** `spit`, `peat`, or `part`.
-    * In the valid terms, the `p` is one character away from the `t`. One vowel exists between the `p` and the `t`. 
-    The `p` can be prefixed by characters as long as it is more than one.
+1. Write a regular expression matching strings of all a or b such as aababa or bbaa.
+    ` /[ab]/`
     
-    /.+?p+\[aeiou\]t+/
+2. Write a regular expression matching strings of consecutive a and b such as ababab or aba
+    ` /a+b+/`
+    
+3. Write a regular expression matching pit, pot, and respite but not peat, spit, or part.
+    `/
+    ` 
