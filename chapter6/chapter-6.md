@@ -74,5 +74,8 @@ i.e. /-?\[\0-9\]\+/
     ` /a+b+/`
     
 3. Write a regular expression matching pit, pot, and respite but not peat, spit, or part.
-    `/
+     `/.?p+[aeiou]+t+/`
+     
+
+    
     ` 
